@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature Converter</title>
+    <style>
+
+    </style>
+    <link rel="stylesheet" href="temperature.css">
+    <script>
+        window.test = function(e) {
+            if (e.value === 'Fahrenheit') {
+                alert(e.value);
+                return convert_to_Celsius();
+            } else if (e.value === 'Celsius') {
+                alert(e.value);
+                return convert_to_fahrenheit();
+            }
+        }
+
+       function convert_to_Celsius(){
+            let x = document.getElementById("mytext_from").value;
+            let fahrenheit = (x*9/5) + 32;
+            document.getElementById("mytext_to").value = fahrenheit;
+            document.getElementById("unit").value = "Celsius";
+        }
+        function convert_to_fahrenheit(){
+            let x = document.getElementById("mytext_from").value;
+            let celsius = (x - 32) *5/9 ;
+            document.getElementById("mytext_to").value = celsius;
+            document.getElementById("unit").value = "Fahrenheit"
+        }
+        function restart(){
+            document.getElementById("mytext_from").value = "";
+            document.getElementById("mytext_to").value ="";
+        }
+
+    </script>
+</head>
+<body>
+
+
+<p> Convert from Celsius to Fahrenheit in a flash </p>
+<form>
+
+<p>Convert from :</p>
+    <input type="text" name="" value=""  id="mytext_from">
+<select style = "" id = "from" name = "from" onchange="test(this);">
+    <option disabled selected value> -- select an option -- </option>
+    <option>Fahrenheit</option>
+    <option>Celsius</option>
+</select>
+<p> Convert to:</p>
+    <input type="text" name="" value="" id="mytext_to" >
+    <input type="text" name = "" value ="" id="unit">
+    <button type="" name = "" id="button" onclick="restart();">Restart</button>
+</form>
+
+</body>
+</html>
