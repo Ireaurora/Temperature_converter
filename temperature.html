@@ -8,30 +8,28 @@
     <script>
         window.test = function(e) {
             if (e.value === 'Fahrenheit') {
-                //alert(e.value);
                 return convert_to_Celsius();
             } else if (e.value === 'Celsius') {
-                //alert(e.value);
                 return convert_to_fahrenheit();
             }
         }
     </script>
 </head>
 <body>
-<section id="selectionid">
-<p> Convert from Celsius to Fahrenheit in a flash </p>
+<h1>Temperature converter</h1>
 <form>
-<p>Convert from :</p>
+<section id="selectionid">
+<h2>Convert from :</h2>
     <input type="text" name="" value=""  id="mytext_from">
 <select id = "from" name = "from" onchange="test(this);">
     <option disabled selected value> -- select an option -- </option>
     <option>Fahrenheit</option>
     <option>Celsius</option>
 </select>
-<p> Convert to:</p>
+<h2> Convert to:</h2>
     <input type="text" id="mytext_to" >
     <input type="text" id="unit">
-    <button id="button" onclick="restart();">Restart</button>
+    <button type="submit" id="button" onclick="restart();">Restart</button>
 </form>
 </section>
 </body>
