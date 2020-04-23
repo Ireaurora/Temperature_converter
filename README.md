@@ -1,1 +1,1 @@
-A simple temperature converter programmed using JavaScript, HMTL and CSS.
+A temperature converter programmed using JavaScript, HMTL and CSS.
